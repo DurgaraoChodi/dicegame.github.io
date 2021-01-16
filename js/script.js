@@ -59,9 +59,9 @@ document.querySelector('.btn--hold').addEventListener('click', function () {
         scores[activePlayer] += currScore;
         document.getElementById(`current--${activePlayer}`).textContent = 0;
         document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
-        if (scores[activePlayer] >= 20) {
+        if (scores[activePlayer] >= 100) {
             document.querySelector(`.player--${activePlayer}`).classList.add('player--winner')
-            document.querySelector(`.player--${activePlayer}`).classList.add('player--active')
+            document.querySelector(`.player--${activePlayer}`).classList.remove('player--active')
             playing = false;
             diceEl.classList.add('hidden');
         } else {
